@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+
+</head>
+<body>
+<h1>Hola!! Welcome to password generator app</h1>
+<p><a href="{% url 'about' %}">About</a></p>
+<form action="{% url 'password' %}">
+    Select length of passowrd:<select name="length">
+        <option value="6" selected="selected">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select>
+    <br>
+    <input type="checkbox" name="uppercase">Uppercase
+    <br>
+    <input type="checkbox" name="numbers">Numbers
+    <br>
+    <input type="checkbox" name="specialchar">Special Characters
+
+    <br><input type="submit" value="Generate Password">
+</form>
+</body>
+</html>
